@@ -1,4 +1,8 @@
 import { useState } from 'react';
+import {
+  Outlet,
+} from "react-router-dom";
+import { account, createUser, createVerification } from './libs/appwrite';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -42,8 +46,13 @@ function App() {
       </div>
 
       <div>
-
-        <button className="btn btn-primary" onClick={() => setCount((count) => count + 1)}>count is {count}</button>
+        <Outlet />
+        <button className="btn btn-primary" onClick={() => {
+          setCount((count) => count + 1);
+          // createUser('ployx@ioiio.cc', 'password');
+          // createVerification();
+          console.log(account.get())
+        }}>count is {count}</button>
       </div>
 
 
