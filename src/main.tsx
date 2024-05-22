@@ -5,6 +5,7 @@ import {
   redirect,
   RouterProvider,
 } from "react-router-dom";
+
 import App from './App.tsx';
 import './index.css';
 import { account } from './libs/appwrite.ts';
@@ -24,7 +25,7 @@ const router = createBrowserRouter([
     path: "/protected",
     element: <App />,
     loader: async () => {
-      try{
+      try {
         // logged in? pass user to the route
         const user = await account.get();
         return { user };

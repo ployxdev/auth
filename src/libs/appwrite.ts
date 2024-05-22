@@ -21,10 +21,28 @@ const createVerification = () => {
   const promise = account.createVerification('http://192.168.1.60:5000/');
 
   promise.then(function (response) {
-      console.log(response);
+    console.log(response);
   }, function (error) {
-      console.log(error);
+    console.log(error);
   });
 }
 
-export { account, createUser, createVerification };
+const login = (email: string, password: string) => {
+  const promise = account.createEmailPasswordSession(email, password);
+  promise.then(function (response) {
+    console.log(response); // Success
+  }, function (error) {
+    console.log(error); // Failure
+  });
+}
+
+const logout = () => {
+  const promise = account.deleteSessions();
+  promise.then(function (response) {
+    console.log(response);
+  }, function (error) {
+    console.log(error);
+  });
+}
+
+export { account, createUser, createVerification, login, logout };
