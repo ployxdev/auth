@@ -18,7 +18,7 @@ const router = createBrowserRouter(
       element: <AppVite />,
     },
     {
-      path: "app",
+      path: "/app",
       element: <App />,
       // errorElement: <ErrorPage />,
       errorElement: <div>Error</div>,
