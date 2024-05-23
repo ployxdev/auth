@@ -27,7 +27,7 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "/protected",
+    path: "protected",
     element: <App />,
     loader: async () => {
       try {
@@ -42,7 +42,7 @@ const router = createBrowserRouter([
     }
   },
   {
-    path: "/login",
+    path: "login",
     element: <App />,
   },
 ]);
