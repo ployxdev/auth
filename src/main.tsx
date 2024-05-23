@@ -6,6 +6,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
+import AppVite from './AppVite.tsx';
 import App from './App.tsx';
 import './index.css';
 import { account } from './libs/appwrite.ts';
@@ -13,6 +14,10 @@ import { account } from './libs/appwrite.ts';
 const router = createBrowserRouter([
   {
     path: "/",
+    element: <AppVite />,
+  },
+  {
+    path: "app",
     element: <App />,
     // errorElement: <ErrorPage />,
     errorElement: <div>Error</div>,
