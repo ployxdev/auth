@@ -6,7 +6,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-import AppVite from './AppVite.tsx';
+// import AppVite from './AppVite.tsx';
 // import App from './App.tsx';
 import './index.css';
 // import { account } from './libs/appwrite.ts';
@@ -14,8 +14,12 @@ import './index.css';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <AppVite />,
+    element: <div>Test</div>,
   },
+  // {
+  //   path: "/",
+  //   element: <AppVite />,
+  // },
   // {
   //   path: "app",
   //   element: <App />,
